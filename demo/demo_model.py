@@ -19,6 +19,7 @@ import cv2
 
 class SGG_Model(object):
     def __init__(self, config, dict_classes, tracking=False, logging_level="INFO") -> None:
+        cfg.set_new_allowed(True)  # Add this line before merging the file 
         cfg.merge_from_file(config)
         cfg.freeze()
         self.cfg = cfg
